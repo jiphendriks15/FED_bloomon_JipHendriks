@@ -697,6 +697,9 @@ section.verhalen ul {
 	
 }
 
+.verhalen h2{
+	color: var(--color-text);
+}
 
 
 .verhalen li:nth-of-type(1), .verhalen li:nth-of-type(6){

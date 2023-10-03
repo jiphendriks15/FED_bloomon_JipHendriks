@@ -79,13 +79,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/schermtel1.jpeg" width="375px" alt="eerste pagina telefoon">
+
+  <img src="readme-images/schermtelefoon2.jpeg" width="375px" alt="tweede scherm telefoon">
+
+<img src="readme-images/lp1.jpeg" width="375px" alt="eerste scherm laptop">
+
+<img src="readme-images/lp2.jpeg" width="375px" alt="tweede scherm laptop">
+
+<img src="readme-images/lp3.jpeg" width="375px" alt="derde scherm laptop">
+
+<img src="readme-images/lp4.jpeg" width="375px" alt="vierde scherm laptop">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
   
-<img src="readme-images/schetsen.pdf" alt="geschetste weergave van bloomons eerste pagina">
+<img src="readme-images/dynamisch.jpeg" width="375px" alt="Dynamische deel website">
+  
 </details>
 
 
