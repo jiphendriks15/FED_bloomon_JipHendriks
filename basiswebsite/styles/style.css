@@ -1,0 +1,817 @@
+@font-face {
+	font-family: raleWay;
+	src: url(/text/Raleway-VariableFont_wght.ttf);
+  }
+
+@font-face {
+	font-family: patron;
+	src: url(/text/Patron.woff2) format('woff2');
+  }
+
+
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+/*dit is het root stukje, hier geef ik alle kleuren weer die ik gebruik
+in de website. Verder naar beneden heb ik dit opgeroepen met var(--color-button).*/
+:root {
+	
+	--color-background:white;
+	--color-button:#464646;
+	--color-hover:#626262;
+	--color-text: black;
+	--color-text2: white;
+	--color-text3: #F2A386;
+	--color-background2: #F4E9DD;
+	--button-background: transparent;
+	--bg-image: url(/images/craft.jpg);
+	--brightness: 100%;
+	--border-top: solid black .03em;
+
+
+
+	--font-size: 1em;
+}
+
+.dark-theme{
+	--color-text: white;
+	--color-text2: black;
+	--color-text3: white;
+	--color-background: black;
+	--color-background2: #07420b;
+	--button-background:  lightgrey;
+	--bg-image: url(/images/green.avif);
+	--brightness: 75%;
+	--border-top: solid white .03em;
+
+	
+}
+
+
+
+
+/*Dit stukje code zorgt ervoor dat de body, h2, p en a er overal hetzelfde
+uitzien. Deze waardes worden dus door de gehele website gevolgd.*/
+
+
+
+
+
+body{
+	margin:0;
+	font-family: patron;
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+h2{
+	font-size: 1.75em;
+    font-weight: 400;
+    letter-spacing: 0.03em;	
+}
+
+p{
+	font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: 400;
+    letter-spacing: 0.13em;
+    line-height: 1em;
+}
+
+img{
+	filter: brightness(var(--brightness));
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+/*hier geef ik aan de gehele header mee, bijvoorbeeld dat hij de overflow niet laat zien
+en met position fixed zorg ik ervoor dat de header altijd zichtbaar is aan de 
+bovenkant van het scherm*/
+
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	width: 100%;
+	overflow: hidden;
+	max-height: 90%;
+	padding: 0;
+	background-color: white;
+}
+
+/*justify-conttent: space-between; zorgt eroor dat er een afstand tussen alle ul's komt
+dit doe hij over de gehele breedte van het scherm*/
+header ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	padding:0;
+	margin-left: 1em;
+	
+}
+
+header ul li img{
+	max-width: 100%;
+	filter: brightness(100%);
+	
+}
+
+.hero{
+	margin-top: 3em;
+}
+
+section.hero ul {
+	display: flex;
+	overflow: hidden;
+	list-style: none;
+	padding:0;
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+} 
+
+/* hier maak ik gebruik van de display grid, deze grid bestaat uit 1 column en 4 rijen. 
+Allemaal ingedeeld met het gebruik van FR.*/
+section.hero ul li {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr .5fr .5fr 1fr;
+	text-align: center;	
+}
+
+/*door gebruik te maken van grid-row start zeg ik dat de h2 moet beginnen op; de 2de row.
+hetzelfde geld voor de grid-colomn-start, deze start op column 1.*/
+section.hero ul li h1 {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	margin:0 auto;
+	font-size: 2.5em;
+	z-index: 2;
+	color:white;
+  }
+
+  section.hero ul li p {
+	grid-row-start: 3;
+	grid-column-start: 1;
+	z-index: 2;
+	color: white;
+  }
+
+ 
+/*hier combineer ik de (colomn en row) grid start en end. door ze grid-colomn en
+grid-row te noemen. voor de / zet je de start waarde en na de / de eind waarde.*/
+  section.hero ul li .container{
+	width: 100%;
+  	height: auto;
+  	grid-column: 1/-1;
+	grid-row: 1/-1;
+	margin-top: 3em;
+  }
+
+   
+  section.hero ul li a{
+	width: 9em;
+	height: 3em; 
+	display: block;
+	background-color: #FEF7A5;
+	z-index: 2;
+	border-style: none;
+	border-radius: 2em;
+	grid-column: 1;
+	grid-row-start: 4;
+	margin: 0 auto;
+	color:black;
+	padding-top: 1em;
+  }
+
+  /*animation: slide 9s infinite; zorgt ervoor dat er na 9s van img wordt gewisseld.
+  infinite staat erbij zodat hij oneindig voor slide.*/
+
+.wrapper{
+	width: 100%;
+	display: flex;
+	animation: slide 9s infinite;
+}
+
+.wrapper img{
+	width: 100%;
+}
+/* keyframes slide geeft aan dat het een slide animatie wordt. Vervolgens staan er een
+aantal percentages, deze geven aan op welk procent er iets moet gaan gebeuren. In dit 
+geval: een horizontale verschuiving. Voorbeeld: bij 30 % voor het onderdeel met 100% 
+zijn eigen breedte naar links geschoven*/
+@keyframes slide{
+	0%{
+		transform: translateX(0);
+	}
+	25%{
+		transform: translateX(0);
+	}
+	30%{
+		transform: translateX(-100%);
+	}
+	50%{
+		transform: translateX(-100%);
+	}
+	55%{
+		transform: translateX(-200%);
+	}
+	75%{
+		transform: translateX(-200%);
+	}
+	80%{
+		transform: translateX(-300%);
+	}
+	100%{
+		transform: translateX(-300%);
+	}
+}
+
+
+/*bestseller:
+Deze bestaat voornamelijk uit list items waar je scrollend doorheen kunt gaan.
+Dit doe je eenvoudig door gebruik te maken van overflow-x: scroll;*/
+.best{
+	margin-top: 0;
+	padding-top: 0;
+	background-color: var(--color-background2)
+}
+
+.best ul{
+	padding: 0;
+	display:flex;
+	overflow-x: scroll;
+}
+
+.best li{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	padding:1em;
+	list-style: none;
+}
+
+
+
+.best img{
+	width: 14.2em;
+	height: 18.9em;
+}
+
+.best a{
+	color: var(--color-text);
+	
+}
+
+.link{
+	display: flex;
+	align-items: center;
+	margin-left: 1em;
+}
+.link button{
+	width: 1em;
+
+}
+
+.link a:nth-of-type(1){
+	text-decoration: underline;
+	color: black;
+	font-size: 1em;
+	letter-spacing: normal;
+	color: var(--color-text);
+}
+
+.link a{
+	margin: 1em;
+	text-decoration: none;
+}
+
+
+
+
+/*compleet
+Deze section bestaan ook uit list items waar je doorheen kunt scroll. Wederom met
+overflow-x: scroll;. De afbeelding hebben ook allemaal een andere hoogte, dit heb
+ik gedaan met height: auto;*/
+.compleet{
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+.compleet ul{
+	padding: 0;
+	display:flex;
+	align-items: flex-end;
+	overflow-x: scroll;
+	list-style: none;
+}
+
+.compleet h2{
+	margin: 2em 0em 2em 1em;
+}
+.compleet img{
+	width: 18.4em;
+	height: auto;
+	margin: 1em;
+}
+
+.compleet p{
+	padding:1em;
+}
+
+.compleet a{
+	display: block;
+	margin-left: 1em;
+}
+
+
+
+.compleet a{
+	border-style: none;
+	border-radius: 2em;
+	width: 17em;
+	height: 3em; 
+	background-color: var(--color-button);
+	color: white;
+    padding: 0.87em 1.5em;
+	margin-bottom: 1em;
+}
+
+.compleet a:nth-of-type(2){
+	background-color: var(--color-background);
+	border: solid black;
+	color: var(--color-text)
+}
+
+.compleet a:hover{
+	background-color: var(--color-hover);
+}
+
+/*herfst
+deze sectie bestaat uit een img, h2, p en button*/
+
+.herfst{
+	background-color: var(--color-background2);
+	color: var(--color-text);	
+	padding-bottom: 2em;
+}
+
+.herfst img{
+	width: 95%;
+	margin-left: 0.5em;
+}
+
+.herfst a{
+	border-radius: 2em;
+	width: 22em;
+	height: 3em; 
+	background-color: var(--color-button);
+    padding: 0.87em 1.5em;
+	margin-bottom: 1em;
+	margin-left: 2em; /*===========================================================*/
+	margin-bottom: 2em;
+}
+
+.herfst a:hover{
+	background-color: var(--color-hover);
+}
+
+.herfst h2{
+	margin: 1em;
+}
+
+.herfst p{
+	margin: 2em;
+}
+
+/*abonnement
+deze sectie bestaat ook uit een img, h2, p en 2 buttons
+*/
+
+section.abo img{
+	width: 90%;
+	margin-left: 1.2em;
+	margin-top: 1.2em;
+}
+
+section.abo h2{
+	margin: 1em;
+}
+
+section.abo p{
+	margin: 2em;
+}
+
+section.abo a{
+	border-radius: 2em;
+	background-color: var(--color-button);
+    padding: .87em 1.5em;
+	margin-left: 2em;
+}
+.abo a:nth-of-type(2){
+	background-color: var(--color-background);
+	border: solid black;
+	color: var(--color-text)
+}
+
+section.abo a:hover{
+	background-color: var(--color-hover);
+}
+
+
+/*teksten*/
+.text{
+	margin: 2em 1em 2em 1em;
+}
+
+.text a{
+	color: var(--color-text);
+	text-decoration: underline;
+}
+
+/*form*/
+#myForm{
+	padding-top: 1em;
+	background-color: var(--color-background2);
+}
+#myForm h2{
+	margin-left: .4em;
+}
+
+#myForm input{
+	width: 13em;
+	margin-right: 10em;
+	margin-top:1em;
+}
+
+#myForm button{
+	border: solid black .2em;
+	border-radius: 1.5em;
+	background-color: var(--button-background);
+	padding: 1em;
+	margin: 1em 1em 1em 1em;
+}
+
+#myForm button:hover{
+	background-color: var(--color-hover);
+	color: white;
+}
+
+#myForm label{
+	margin-left:1em;
+}
+
+
+/*audio*/
+
+
+/*hier begint de css voor de footer
+De footer bestaat uit vele overdelen, maar het belangrijkste overdeel is de dropdown.
+hierbijhebik ook gebruik gemaakt van javascript. Kijk daar voor de uitleg.*/
+
+
+footer{
+	margin-top: 2em;
+	padding-top: 1.5em;
+	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-image: var(--bg-image);
+}
+
+footer p{
+	text-align: center;
+	color: white;
+}
+
+footer > img{
+	width: 50%;
+
+}
+
+
+.footer h2{
+	font-size: .1em;
+	color: transparent;
+}
+footer a{
+	color: white;
+}
+footer ul{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	
+}
+
+footer ul a{
+	margin: 1em 1em 1em 1em;
+	
+}
+
+
+
+.knopje{
+	display: flex;
+	width: 100vw;
+	justify-content: space-between;
+	border: none;
+	border-top: var(--border-top);
+	outline: none;
+	background: none;
+	color: white;
+	padding: 2em;
+	
+}
+
+.knopje button img{
+	float: right;
+}
+
+
+.logos{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;	
+	margin: 1em 4em 2em 1em;
+}
+
+.logos img{
+	width: auto;
+	height: 2em;
+	padding: 0.3em;
+}
+
+
+.logos h2{
+	font-size: .01em;
+	color: transparent;
+}
+
+
+.closed{
+	display: none;
+}
+
+.open{
+	display: block;
+}
+
+.verhaaltje{
+	display: none;
+	margin-bottom: 2em;
+}
+
+.verhaaltje a{
+	display: flex;
+	padding: 2em 0em 0em 2.1em;
+}
+
+
+.betalen{
+	display: flex;
+	justify-content: center;
+}
+
+.betalen img{
+	padding: 0.1em;
+}
+
+.betalen h2{
+	color:transparent;
+	font-size: .1em;
+	margin: 0;	
+}
+
+
+
+
+
+
+
+
+/*extra pagina (floral stories
+bij deze sectie heb ik ook gebruik gemaakt van grid, een grid van 2 column
+en automatische berekende rijen que lengte*/
+
+.geluid{
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	margin: 5em 0em 0em 0em;
+	padding: 3em 0em 3em 0em;
+	background-color: var(--color-background2);
+}
+
+.geluid audio{
+	margin-left: 3em;
+}
+section.verhalen ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	text-align: center;	
+	list-style: none;
+	padding: 0;
+	text-align: left;
+	margin:1em;
+}
+
+.verhalen{
+	background: var(--primary-color);
+}
+
+.verhalen ul li{
+	color: var(--color-text);
+}
+
+.verhalen img{
+	width: 10.2em;
+	height: auto;
+}
+
+.verhalen p{
+	color: var(--color-text3);
+	font-size: .75em;
+	
+}
+
+.verhalen button{
+	border-style: solid;
+	border-radius: 2em;
+	width: 17em;
+	height: 3em; 
+	background-color: white;
+	color:black;
+	margin-left: 6em;
+	font-weight: 400;
+    letter-spacing: 0.13em;
+    line-height: 1em;
+    padding: 0.87em 1.5em;
+	margin-bottom: 1em;
+}
+
+.verhalen button:hover{
+	background-color: var(--color-hover);
+}
+
+.verhalen ul li a h2{
+	font-size: 1em;
+	color: var(--color-text);
+	
+}
+
+/*
+
+.verhalen li:nth-of-type(3){
+	grid-column-start: 3;
+	grid-column-end: 3;	
+}
+
+.verhalen ul a li:nth-of-type(3)img{
+	width: 20.4em;
+	background-color: #ff9f80;
+}*/
+
+.verhalen img{
+	margin:0;
+	padding:0;
+}
+
+
+
+
+#icon{
+	width: 30px;
+	cursor: pointer
+}
+
+
+
+.theme-switcher button {
+	position: relative;
+	overflow: hidden;
+	background: transparent;
+	padding: 1em;
+	border-radius: .6em;
+	border: none;
+	color: greenyellow;
+	cursor: pointer;
+	z-index: 1;
+  }
+
+  .theme-switcher button:active{
+	transform: scale(0.95);
+  }
+
+  .theme-switcher button::before{
+	content: '';
+	position: absolute;
+	inset: -3px 50px;
+	transition: inset 350ms ease;
+	z-index: -2;
+  }
+  .theme-switcher button:hover::before{
+	inset: -20px 0px;
+	background: rgb(216, 222, 206);
+  }
+
+  .theme-switcher button::after{
+	content: '';
+	position: absolute;
+	inset: 3px;
+	border-radius: 10px;
+	background: var(--color-background2);
+	z-index: -1;
+  }
+
+/* Stijlen voor de micro interactie, toevoegen aan favorieten */
+
+
+#imageContainer {
+    margin: 20px 0;
+}
+
+#headerImage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stijlen voor de knop */
+#changeImageButton {
+    grid-column: 1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+
+#changeImageButton img{
+    width: 2em;
+	height: 2em;
+	background-color: var(--color-background2);
+	
+	
+}
+
+
+#logo {
+    width: 100px; /* Aanpassen aan de grootte van je logo */
+    transition: transform 0.3s ease; /* Overgang voor de animatie */
+}
+
+/* Stijlen voor de logo-animatie bij hover */
+#logo:hover {
+    transform: rotate(360deg); /* Draai het logo 360 graden bij hover */
+}
+
+
+/* Stijlen voor de loader */
+.loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-right: 8px; /* Voeg wat ruimte toe tussen de loader en de tekst */
+    opacity: 0; /* Verberg de loader aanvankelijk */
+}
+
+
+/* Stijlen voor het weergeven van de loader bij hover */
+#verstuur:hover .loader {
+    opacity: 1;
+}
+
+/* Keyframes voor de loader-animatie */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
