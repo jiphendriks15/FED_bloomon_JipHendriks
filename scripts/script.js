@@ -52,21 +52,22 @@ document.addEventListener('DOMContentLoaded', function() {
     myForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Activeer de loader bij het indienen van het formulier
+        /*Dit stukje laad de loader in als het formulier verstuurt is */
         const loader = document.querySelector('.loader');
         loader.style.opacity = '1';
 
-        /* Simuleer een vertraging (bijv. 2 seconden) om de gebruiker de loader te laten zien */
+        /*Zorgt ervoor dat er een vertraging van 2 seconden komt*/
         setTimeout(function() {
             const naam = document.getElementById('naam').value;
             const email = document.getElementById('email').value;
 
-            /* Deze code zorgt ervoor dat de gegevens naar de div genaamd resultaat worden verzonden */
+            /* Deze code zorgt ervoor dat de gegevens naar de div genaamd 
+            resultaat worden verzonden */
             resultaatDiv.innerHTML = `Naam: ${naam}<br>E-mail: ${email}`;
 
-            // Herstel de loader
+            /*Dit stukje zorgt ervoor dat de loader herstelt wordt */
             loader.style.opacity = '0';
-        }, 2000); // 2000 milliseconden = 2 seconden (aanpassen aan je behoeften)
+        }, 2000); /*2000 milliseconden = 2 seconden*/
     });
 });
 
@@ -95,7 +96,7 @@ icon.onclick = function(){
 
 const headerImage = document.getElementById('headerImage');
 const changeImageButton = document.getElementById('changeImageButton');
-const imageSources = ['images/o.png', 'images/1.png', 'images/2.png', 'images/3.png'];
+const imageSources = ['images/00.png', 'images/1.png', 'images/2.png', 'images/3.png'];
 
 /*deze variable houdt bij welke afbeelding op dat moment word weergegeven. */
 let currentImageIndex = 0;

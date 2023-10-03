@@ -62,11 +62,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-   <img src="readme-images/wcag1" alt="eerste pagina wcag">
-  <img src="readme-images/wcag2" alt="tweede pagina wcag">
-  <img src="readme-images/wcag3" alt="derde pagina wcag">
-  <img src="readme-images/wcag4" alt="vierde pagina wcag">
-  <img src="readme-images/wcag5" alt="vijfde pagina wcag">
+   <img src="readme-images/wcag1.png" alt="eerste pagina wcag">
+  <img src="readme-images/wcag2.png" alt="tweede pagina wcag">
+  <img src="readme-images/wcag3.png" alt="derde pagina wcag">
+  <img src="readme-images/wcag4.png" alt="vierde pagina wcag">
+  <img src="readme-images/wcag5.png" alt="vijfde pagina wcag">
 
 
 </details>

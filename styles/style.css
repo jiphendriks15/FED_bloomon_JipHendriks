@@ -1,11 +1,11 @@
 @font-face {
 	font-family: raleWay;
-	src: url(/text/Raleway-VariableFont_wght.ttf);
+	src: url(../text/Raleway-VariableFont_wght.ttf);
   }
 
 @font-face {
 	font-family: patron;
-	src: url(/text/Patron.woff2) format('woff2');
+	src: url(../text/Patron.woff2) format('woff2');
   }
 
 
@@ -25,7 +25,7 @@ in de website. Verder naar beneden heb ik dit opgeroepen met var(--color-button)
 	--color-text3: #F2A386;
 	--color-background2: #F4E9DD;
 	--button-background: transparent;
-	--bg-image: url(/images/craft.jpg);
+	--bg-image: url(../images/craft.jpg);
 	--brightness: 100%;
 	--border-top: solid black .03em;
 
@@ -41,7 +41,7 @@ in de website. Verder naar beneden heb ik dit opgeroepen met var(--color-button)
 	--color-background: black;
 	--color-background2: #07420b;
 	--button-background:  lightgrey;
-	--bg-image: url(/images/green.avif);
+	--bg-image: url(../images/green.avif);
 	--brightness: 75%;
 	--border-top: solid white .03em;
 
@@ -124,15 +124,27 @@ header ul{
 	list-style: none;
 	justify-content: space-between;
 	padding:0;
-	margin-left: 1em;
+	margin-left: .1em;
 	
 }
 
 header ul li img{
 	max-width: 100%;
 	filter: brightness(100%);
-	
 }
+
+#imageContainer {
+    margin: 0;
+}
+
+#headerImage {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
 
 .hero{
 	margin-top: 3em;
@@ -253,6 +265,11 @@ Dit doe je eenvoudig door gebruik te maken van overflow-x: scroll;*/
 	margin-top: 0;
 	padding-top: 0;
 	background-color: var(--color-background2)
+}
+
+.best > h2:first-of-type{
+	color: transparent;
+	font-size: .1em;
 }
 
 .best ul{
@@ -674,23 +691,23 @@ section.verhalen ul {
 	background-color: var(--color-hover);
 }
 
-.verhalen ul li a h2{
+.verhalen ul li a h3{
 	font-size: 1em;
 	color: var(--color-text);
 	
 }
 
-/*
 
-.verhalen li:nth-of-type(3){
-	grid-column-start: 3;
-	grid-column-end: 3;	
+
+.verhalen li:nth-of-type(1), .verhalen li:nth-of-type(6){
+	grid-column: 1 / span 2;
 }
 
-.verhalen ul a li:nth-of-type(3)img{
-	width: 20.4em;
+.verhalen ul li:nth-of-type(1) a img, .verhalen ul li:nth-of-type(6) a img{
+	width: 100%;
 	background-color: #ff9f80;
-}*/
+}
+
 
 .verhalen img{
 	margin:0;
@@ -747,14 +764,7 @@ section.verhalen ul {
 /* Stijlen voor de micro interactie, toevoegen aan favorieten */
 
 
-#imageContainer {
-    margin: 20px 0;
-}
 
-#headerImage {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Stijlen voor de knop */
 #changeImageButton {
