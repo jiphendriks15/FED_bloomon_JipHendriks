@@ -630,7 +630,9 @@ section.verhalen ul {
 .verhalen button:hover {
   background-color: var(--color-hover);
 }
-
+.verhalen ul li a h2{
+	font-size: 1.55em;
+}
 .verhalen ul li a h3 {
   font-size: 1em;
   color: var(--color-text);
