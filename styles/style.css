@@ -591,6 +591,7 @@ section.verhalen ul {
   padding: 0;
   text-align: left;
   margin: 1em;
+  grid-gap: 1em;
 }
 
 .verhalen {
