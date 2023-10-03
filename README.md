@@ -177,11 +177,11 @@ Ik ben begonnen met het maken van de header en de eerste sectie met daarin een a
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
  Lijst met je bevindingen die in de test naar voren kwamen:
-  <img src="readme-images/wcag1" alt="eerste pagina wcag">
-  <img src="readme-images/wcag2" alt="tweede pagina wcag">
-  <img src="readme-images/wcag3" alt="derde pagina wcag">
-  <img src="readme-images/wcag4" alt="vierde pagina wcag">
-  <img src="readme-images/wcag5" alt="vijfde pagina wcag">
+  <img src="readme-images/wcag1.png" alt="eerste pagina wcag">
+  <img src="readme-images/wcag2.png" alt="tweede pagina wcag">
+  <img src="readme-images/wcag3.png" alt="derde pagina wcag">
+  <img src="readme-images/wcag4.png" alt="vierde pagina wcag">
+  <img src="readme-images/wcag5.png" alt="vijfde pagina wcag">
  
 </details>
 
@@ -251,9 +251,8 @@ probleem week 4
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik heb veel problemen gemaakt met het maken en uitzoeken van de micro interactie.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -284,7 +283,7 @@ probleem week 4
   7. uitleg video darkmode
     https://www.youtube.com/watch?v=9LZGB3OLXNQ
   8. uitleg over het maken van de micro interactie
-    https://chat.openai.com/?model=text-davinci-002-render-sha
+    https://chat.openai.com/?model=text-davinci-002-render-sha + uitleg op papier Marten + Evi
   9. overflow(x): scroll Tessa bedacht.
   10. formulier
     https://www.youtube.com/watch?v=sGQSz22U8VM
